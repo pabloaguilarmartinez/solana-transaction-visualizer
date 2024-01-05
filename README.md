@@ -18,3 +18,5 @@ be a single-page application built with React.
 - React
 - Vite
 - TailwindCSS
+
+The web is up and running on: [https://pam-solana-transaction-visualizer.vercel.app/](https://pam-solana-transaction-visualizer.vercel.app/)
