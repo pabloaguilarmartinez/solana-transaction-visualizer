@@ -1,10 +1,9 @@
 import React from 'react';
-import {Nullable} from '../shared/nullable.ts';
 
 type TransactionDetailProps = {
   name: string;
   description: string;
-  value: string | Nullable<number>;
+  value: string;
 };
 
 export const TransactionDetail: React.FC<TransactionDetailProps> = ({name, description, value}) => {

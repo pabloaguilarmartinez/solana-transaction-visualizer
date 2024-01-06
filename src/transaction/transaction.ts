@@ -23,23 +23,23 @@ export class Transaction {
     );
   }
 
-  details(): {name: string, description: string, value: string | Nullable<number>}[] {
+  details(): {name: string, description: string, value: string}[] {
     return [
       {
 
         name: 'Network Fee',
         description: 'Cost for processing this transaction.',
-        value: this.fee
+        value: `${this.fee} SOL`
       },
       {
         name: 'Slot',
         description: 'The slot this transaction happened on.',
-        value: this.slot
+        value: this.slot.toString()
       },
       {
         name: 'Timestamp',
         description: 'The date the transaction was processed.',
-        value: this.blockTime
+        value: this.blockTime ? new Date(this.blockTime * 1000).toUTCString() : ''
       },
       {
         name: 'Previous Block Hash',
@@ -49,7 +49,7 @@ export class Transaction {
       {
         name: 'Compute Units Consumed',
         description: 'The compute units consumed after processing the transaction',
-        value: this.computeUnitsConsumed
+        value: this.computeUnitsConsumed.toString()
       }
     ];
   }
